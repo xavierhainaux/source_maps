@@ -55,6 +55,7 @@ class SourceMapFileSpan implements SourceMapSpan, FileSpan {
   FileSpan expand(FileSpan other) => _inner.expand(other);
   String message(String message, {color}) =>
       _inner.message(message, color: color);
+  String highlight({color}) => _inner.highlight(color: color);
   String toString() => _inner.toString()
       .replaceAll("FileSpan", "SourceMapFileSpan");
 }
